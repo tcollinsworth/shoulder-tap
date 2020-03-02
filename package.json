@@ -1,7 +1,7 @@
 {
   "name": "shoulder-tap",
-  "version": "0.0.1",
-  "description": "Allows one or more clients to connect to a server and allow either to signal the other via a light-weight shoulder-tap event to indicate that work is available. It utilizes web sockets. It was implemented to reduce latency and need for high frequency polling when implementing reliable distributed transactions between microservices.",
+  "version": "0.0.2",
+  "description": "Allows clients to connect to a server and signal via a light-weight shoulder-tap event to indicate that work is available. It utilizes UDP. It was implemented to reduce latency and need for high frequency polling when implementing reliable distributed transactions between microservices.",
   "main": "index.js",
   "scripts": {
     "watchUnit": "NODE_ENV=DEBUG ava --fail-fast -v **/__tests__/**/*test*.js --watch",
