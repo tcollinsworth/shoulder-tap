@@ -33,6 +33,7 @@
     "url": "git@github.com:tcollinsworth/ab-test-selector.git"
   },
   "dependencies": {
+    "delay": "^4.3.0",
     "esm": "^3.2.25"
   },
   "devDependencies": {
