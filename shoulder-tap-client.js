@@ -3,7 +3,7 @@ import dgram from 'dgram'
 export default class ShoulderTapCient {
   constructor(config = {}) {
     this.PORT = config.PORT || 3131
-    this.HOST = config.host || '127.0.0.1'
+    this.HOST = config.HOST || '127.0.0.1'
     this.type = config.type || 'udp4'
     this.client = dgram.createSocket(this.type)
   }

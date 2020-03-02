@@ -8,7 +8,7 @@ Node 10+
 
 ## Configuration Options
 
-Configuration options with defaults that can be passed to the constructor.  
+Configuration options with defaults that can be passed to the constructor.
 
 ```javascript
 {
