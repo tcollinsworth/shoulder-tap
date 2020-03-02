@@ -1,0 +1,46 @@
+{
+  "name": "shoulder-tap",
+  "version": "0.0.1",
+  "description": "Allows one or more clients to connect to a server and allow either to signal the other via a light-weight shoulder-tap event to indicate that work is available. It utilizes web sockets. It was implemented to reduce latency and need for high frequency polling when implementing reliable distributed transactions between microservices.",
+  "main": "index.js",
+  "scripts": {
+    "watchUnit": "NODE_ENV=DEBUG ava --fail-fast -v **/__tests__/**/*test*.js --watch",
+    "ava": "ava",
+    "test": "ava --fail-fast -v __tests__/*tests.js",
+    "watchLint": "esw . --ext=js --ignore-pattern '**/__tests__' --ignore-path .gitignore --fix --watch",
+    "lint": "eslint . --ext=js --ignore-pattern '**/__tests__' --ignore-path .gitignore --fix"
+  },
+  "keywords": [
+    "shoulder",
+    "tap",
+    "UDP",
+    "distributed",
+    "transaction",
+    "shoulder tap",
+    "distributed transaction"
+  ],
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "esm": {
+    "force": true,
+    "mode": "auto"
+  },
+  "author": "Troy Collinsworth",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tcollinsworth/ab-test-selector.git"
+  },
+  "dependencies": {
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-watch": "^6.0.1",
+    "ignore-styles": "^5.0.1"
+  }
+}
