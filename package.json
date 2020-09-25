@@ -8,6 +8,7 @@
     "ava": "ava",
     "test": "ava --fail-fast -v __tests__/*tests.js",
     "testServer": "node test-server/test-server-shim",
+    "testClient": "node test-client/test-client-shim",
     "watchLint": "esw . --ext=js --ignore-pattern '**/__tests__' --ignore-path .gitignore --fix --watch",
     "lint": "eslint . --ext=js --ignore-pattern '**/__tests__' --ignore-path .gitignore --fix"
   },
