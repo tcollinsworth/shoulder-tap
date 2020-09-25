@@ -15,11 +15,20 @@ let result
 //   size: 12,
 // }
 
-function listener(message, remote) {
+function listener(rawMessage, remote) {
+  let message
+  try {
+    message = JSON.parse(rawMessage)
+  } catch (err) {
+    console.log(err)
+    // ignore, best-effort
+  }
+
   result = {
     message,
     remote,
   }
+  console.log(result)
 }
 
 test.beforeEach((t) => {
@@ -37,7 +46,12 @@ test.beforeEach((t) => {
 })
 
 test('start server', async (t) => {
-  await shoulderTapClient.sendBestEffort('hello world!')
+  const mesg = {
+    key: 'key',
+    value: 'hello world!',
+  }
+  await shoulderTapClient.sendBestEffort(JSON.stringify(mesg))
   await delay(100)
-  t.is(result.message, 'hello world!')
+  t.is(result.message.key, 'key')
+  t.is(result.message.value, 'hello world!')
 })
