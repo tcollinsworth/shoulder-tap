@@ -32,7 +32,6 @@ function listener(rawMessage, remote) {
 }
 
 test.beforeEach((t) => {
-  // console.log(ShoulderTapServer, typeof ShoulderTapServer)
   shoulderTapServer = new ShoulderTapServer({
     cb: () => console.log('UDP Server listening'),
   })

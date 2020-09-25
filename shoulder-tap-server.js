@@ -15,9 +15,7 @@ export default class ShoulderTapServer {
     })
 
     this.server.on('message', (message, remote) => {
-      // console.log(`${remote.address}:${remote.port} - ${message}`)
       Object.keys(this.listeners).forEach((key) => {
-        // console.log('event', key, message.toString('utf8'))
         this.listeners[key](message.toString('utf8'), remote)
       })
     })
