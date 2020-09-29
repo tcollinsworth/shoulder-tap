@@ -1,6 +1,6 @@
 {
   "name": "shoulder-tap",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Allows clients to connect to a server and signal via a light-weight shoulder-tap event to indicate that work is available. It utilizes UDP. It was implemented to reduce latency and need for high frequency polling when implementing reliable distributed transactions between microservices.",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,11 @@
   },
   "dependencies": {
     "delay": "^4.3.0",
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "json-stringify-safe": "^5.0.1",
+    "lru-cache": "^6.0.0",
+    "pino": "^6.6.1",
+    "pino-pretty": "^4.2.1"
   },
   "devDependencies": {
     "ava": "^2.4.0",

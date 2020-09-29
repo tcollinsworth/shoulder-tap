@@ -1,11 +1,17 @@
+import dns from 'dns'
 import dgram from 'dgram'
+
+import * as dnsLookup from './cached-dns-resolve'
 
 export default class ShoulderTapCient {
   constructor(config = {}) {
     this.PORT = config.PORT || 3131
     this.HOST = config.HOST || '127.0.0.1'
     this.type = config.type || 'udp4'
-    this.client = dgram.createSocket(this.type)
+    this.client = dgram.createSocket({
+      type: this.type,
+      lookup: dnsLookup.lookup,
+    })
   }
 
   setErrorListener(func) {
