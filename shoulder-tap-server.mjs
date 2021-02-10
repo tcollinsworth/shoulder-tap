@@ -1,6 +1,6 @@
 import dgram from 'dgram'
 
-export default class ShoulderTapServer {
+export class ShoulderTapServer {
   constructor(config = {}) {
     this.PORT = config.PORT || 3131
     this.HOST = config.HOST || '127.0.0.1'

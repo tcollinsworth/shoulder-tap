@@ -1,4 +1,4 @@
-import ShoulderTapServer from '../shoulder-tap-server'
+import { ShoulderTapServer } from '../shoulder-tap-server.mjs'
 
 function listener(rawMessage, remote) {
   let message
@@ -18,7 +18,7 @@ function listener(rawMessage, remote) {
   console.log(result)
 }
 
-export default function startTestServer() {
+export function startTestServer() {
   const shoulderTapServer = new ShoulderTapServer({
     // eslint-disable-next-line no-console
     cb: () => console.log('UDP Server listening'),

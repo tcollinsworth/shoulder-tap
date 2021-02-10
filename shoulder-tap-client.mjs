@@ -1,9 +1,8 @@
-import dns from 'dns'
 import dgram from 'dgram'
 
-import * as dnsLookup from './cached-dns-resolve'
+import * as dnsLookup from './cached-dns-resolve.mjs'
 
-export default class ShoulderTapCient {
+export class ShoulderTapClient {
   constructor(config = {}) {
     this.PORT = config.PORT || 3131
     this.HOST = config.HOST || '127.0.0.1'

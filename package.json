@@ -1,16 +1,17 @@
 {
   "name": "shoulder-tap",
-  "version": "1.1.0",
+  "version": "2.0.0",
+  "type": "module",
   "description": "Allows clients to connect to a server and signal via a light-weight shoulder-tap event to indicate that work is available. It utilizes UDP. It was implemented to reduce latency and need for high frequency polling when implementing reliable distributed transactions between microservices.",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
-    "watchUnit": "NODE_ENV=DEBUG ava --fail-fast -v **/__tests__/**/*test*.js --watch",
+    "watchUnit": "NODE_ENV=DEBUG ava --fail-fast -v **/__tests__/**/*test*.mjs --watch",
     "ava": "ava",
-    "test": "ava --fail-fast -v __tests__/*tests.js",
+    "test": "ava --fail-fast -v __tests__/*tests.mjs",
     "testServer": "node test-server/test-server-shim",
     "testClient": "node test-client/test-client-shim",
-    "watchLint": "esw . --ext=js --ignore-pattern '**/__tests__' --ignore-path .gitignore --fix --watch",
-    "lint": "eslint . --ext=js --ignore-pattern '**/__tests__' --ignore-path .gitignore --fix"
+    "watchLint": "esw . --ext=js --ext=mjs --ignore-path .gitignore --fix --watch",
+    "lint": "eslint . --ext=js --ext=mjs --ignore-path .gitignore --fix"
   },
   "keywords": [
     "shoulder",
@@ -22,7 +23,7 @@
     "distributed transaction"
   ],
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=14.0.0"
   },
   "esm": {
     "force": true,
@@ -35,19 +36,19 @@
     "url": "git@github.com:tcollinsworth/ab-test-selector.git"
   },
   "dependencies": {
-    "delay": "^4.3.0",
-    "esm": "^3.2.25",
+    "delay": "^5.0.0",
     "json-stringify-safe": "^5.0.1",
     "lru-cache": "^6.0.0",
-    "pino": "^6.6.1",
-    "pino-pretty": "^4.2.1"
+    "pino": "^6.11.1",
+    "pino-pretty": "^4.5.0"
   },
   "devDependencies": {
-    "ava": "^2.4.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-watch": "^6.0.1",
+    "ava": "^3.15.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-watch": "^7.0.0",
+    "esm": "^3.2.25",
     "ignore-styles": "^5.0.1"
   }
 }

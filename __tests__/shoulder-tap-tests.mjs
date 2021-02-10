@@ -1,8 +1,10 @@
-import { serial as test } from 'ava'
+import ava from 'ava'
 
 import delay from 'delay'
 
-import { ShoulderTapServer, ShoulderTapClient } from '../index'
+import { ShoulderTapServer, ShoulderTapClient } from '../index.mjs'
+
+const test = ava.serial
 
 let shoulderTapServer
 let shoulderTapClient
@@ -20,6 +22,7 @@ function listener(rawMessage, remote) {
   try {
     message = JSON.parse(rawMessage)
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.log(err)
     // ignore, best-effort
   }
@@ -28,17 +31,20 @@ function listener(rawMessage, remote) {
     message,
     remote,
   }
+  // eslint-disable-next-line no-console
   console.log(result)
 }
 
 test.beforeEach((t) => {
   shoulderTapServer = new ShoulderTapServer({
+    // eslint-disable-next-line no-console
     cb: () => console.log('UDP Server listening'),
   })
   shoulderTapServer.addListener('testListener1', listener)
 
   shoulderTapClient = new ShoulderTapClient()
   shoulderTapClient.setErrorListener((err) => {
+    // eslint-disable-next-line no-console
     console.log(err)
     t.fail()
   })

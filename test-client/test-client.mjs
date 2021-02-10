@@ -1,6 +1,6 @@
-import ShoulderTapClient from '../shoulder-tap-client'
+import ShoulderTapClient from '../shoulder-tap-client.mjs'
 
-export default function sendMesg() {
+export function sendMesg() {
   try {
     const client = new ShoulderTapClient()
     client.setErrorListener((err) => {
