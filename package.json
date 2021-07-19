@@ -1,6 +1,6 @@
 {
   "name": "shoulder-tap",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "description": "Allows clients to connect to a server and signal via a light-weight shoulder-tap event to indicate that work is available. It utilizes UDP. It was implemented to reduce latency and need for high frequency polling when implementing reliable distributed transactions between microservices.",
   "main": "index.mjs",
@@ -39,14 +39,14 @@
     "delay": "^5.0.0",
     "json-stringify-safe": "^5.0.1",
     "lru-cache": "^6.0.0",
-    "pino": "^6.11.1",
-    "pino-pretty": "^4.5.0"
+    "pino": "^6.12.0",
+    "pino-pretty": "^5.1.2"
   },
   "devDependencies": {
     "ava": "^3.15.0",
-    "eslint": "^7.19.0",
+    "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-watch": "^7.0.0",
     "esm": "^3.2.25",
     "ignore-styles": "^5.0.1"
