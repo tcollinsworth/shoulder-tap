@@ -1,6 +1,6 @@
 {
   "name": "shoulder-tap",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "type": "module",
   "description": "Allows clients to connect to a server and signal via a light-weight shoulder-tap event to indicate that work is available. It utilizes UDP. It was implemented to reduce latency and need for high frequency polling when implementing reliable distributed transactions between microservices.",
   "main": "index.mjs",
